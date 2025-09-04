@@ -1,37 +1,19 @@
 export default function Contact() {
+  const resumeHref = `${import.meta.env.BASE_URL}resume.pdf`;
+
   return (
-    <section id="contact" className="py-20 container mx-auto px-6 text-center">
-      <h2 className="text-4xl font-bold mb-6 text-gray-800">Contact</h2>
-      <p className="text-lg mb-6 text-gray-600">Let’s connect and collaborate!</p>
-      <div className="flex flex-wrap justify-center gap-4">
-        <a
-          href="mailto:akkinesa@mail.uc.edu"
-          className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
-        >
-          ✉️ Email
-        </a>
-        <a
-          href="https://linkedin.com/in/saiakkineni"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
-        >
-          🔗 LinkedIn
-        </a>
-        <a
-          href="https://github.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-2 bg-gray-900 text-white rounded-lg shadow hover:bg-gray-800 transition"
-        >
-          💻 GitHub
-        </a>
-        <a
-          href="tel:+15134886621"
-          className="px-6 py-2 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition"
-        >
-          📞 Call
-        </a>
+    <section id="contact" className="section">
+      <div className="max-w-4xl mx-auto text-center glass p-10">
+        <h2 className="h-section">Let’s build something great</h2>
+        <p className="mt-3 opacity-80">
+          I’m open to full-time roles, internships, and impactful collaborations.
+        </p>
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <a href="mailto:akkinesa@mail.uc.edu" className="btn btn-primary">✉️ Email</a>
+          <a href="tel:+15134886621" className="btn btn-outline">📞 Call</a>
+          <a href="https://linkedin.com/in/saiakkineni" target="_blank" rel="noreferrer" className="btn btn-outline">🔗 LinkedIn</a>
+          <a href={resumeHref} className="btn btn-outline">📄 Resume</a>
+        </div>
       </div>
     </section>
   );

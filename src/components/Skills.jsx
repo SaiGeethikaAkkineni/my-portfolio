@@ -1,22 +1,24 @@
 const skills = [
-  "Java", "Python", "React", "Spring Boot", "GraphQL", "MongoDB",
-  "AWS", "Docker", "Kubernetes", "CI/CD", "SQL", "GCP"
+  "Java","Python","TypeScript","React","Spring Boot","GraphQL","MongoDB",
+  "SQL","AWS","GCP","Docker","Kubernetes","CI/CD","Jenkins","Kafka"
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-gray-100">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-6 text-gray-800">Skills</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {skills.map((skill) => (
-            <div
-              key={skill}
-              className="p-6 bg-white shadow-md rounded-lg text-center font-semibold text-gray-700 hover:shadow-xl transition"
-            >
-              {skill}
-            </div>
-          ))}
+    <section id="skills" className="section">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="h-section mb-6">Skills</h2>
+        <div className="glass p-6">
+          <div className="flex flex-wrap gap-3">
+            {skills.map(s => (
+              <span
+                key={s}
+                className="px-4 py-2 rounded-full bg-white/60 dark:bg-white/10 border border-white/20 shadow-sm hover:shadow-lg transition"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

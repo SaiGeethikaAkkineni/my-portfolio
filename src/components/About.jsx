@@ -1,16 +1,15 @@
 export default function About() {
   return (
-    <section id="about" className="py-20 container mx-auto px-6">
-      <h2 className="text-4xl font-bold mb-6 text-gray-800">About Me</h2>
-      <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-        I’m a passionate <span className="text-blue-600">Full-Stack Developer</span> 
-        with 3+ years of experience building scalable web applications using 
-        modern frameworks and cloud platforms. I specialize in 
-        <strong> Spring Boot, React, GraphQL, REST APIs</strong> and 
-        have hands-on expertise with <strong>AWS, GCP, and DevOps</strong>.
-        I love designing clean architectures, writing maintainable code, 
-        and leveraging data-driven solutions to solve real-world problems.
-      </p>
+    <section id="about" className="section">
+      <div className="max-w-5xl mx-auto glass p-8">
+        <h2 className="h-section mb-4">About Me</h2>
+        <p className="leading-relaxed opacity-90">
+          I’m a full-stack developer with 3+ years building scalable web apps across
+          frontend and backend. I specialize in <b>Spring Boot, React, REST/GraphQL</b>,
+          and cloud deployment on <b>AWS & GCP</b>. I care about clean architecture,
+          performance, and developer experience (CI/CD, testing, code quality).
+        </p>
+      </div>
     </section>
   );
 }

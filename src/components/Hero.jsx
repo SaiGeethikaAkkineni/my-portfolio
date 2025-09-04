@@ -1,47 +1,51 @@
 export default function Hero() {
+  const resumeHref = `${import.meta.env.BASE_URL}resume.pdf`;
+
   return (
-    <section className="h-screen flex flex-col justify-center items-center text-center bg-gradient-to-r from-blue-50 to-indigo-100">
-      <h2 className="text-5xl md:text-6xl font-bold text-gray-800">
-        Hi, I'm <span className="text-blue-600">Geethika 👋</span>
-      </h2>
-      <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-2xl">
-        Full-Stack Developer | Cloud Engineer | Problem Solver
+    <section className="relative section flex flex-col items-center justify-center text-center min-h-[88vh]">
+      {/* animated orb background */}
+      <div className="orb -z-10" />
+
+      <h1 className="h-section">
+        Hi, I’m <span className="text-blue-600">Geethika 👋</span>
+      </h1>
+      <p className="mt-4 text-lg md:text-xl max-w-2xl opacity-80">
+        Full-Stack Developer · Cloud Engineer · Problem Solver
       </p>
-      <div className="mt-6 flex flex-wrap justify-center gap-4">
-        <a
-          href="/resume.pdf"
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
-        >
+
+      <div className="mt-8 flex flex-wrap justify-center gap-3">
+        <a href={resumeHref} className="btn btn-primary">
           📄 Resume
         </a>
         <a
           href="https://github.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-2 bg-gray-900 text-white rounded-lg shadow hover:bg-gray-800 transition"
+          target="_blank" rel="noreferrer"
+          className="btn btn-outline"
         >
           💻 GitHub
         </a>
         <a
           href="https://linkedin.com/in/saiakkineni"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
+          target="_blank" rel="noreferrer"
+          className="btn btn-outline"
         >
           🔗 LinkedIn
         </a>
-        <a
-          href="mailto:akkinesa@mail.uc.edu"
-          className="px-6 py-2 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
-        >
+        <a href="mailto:akkinesa@mail.uc.edu" className="btn btn-outline">
           ✉️ Email
         </a>
-        <a
-          href="tel:+15134886621"
-          className="px-6 py-2 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition"
-        >
+        <a href="tel:+15134886621" className="btn btn-outline">
           📞 Call
         </a>
+      </div>
+
+      {/* subtle card with quick facts */}
+      <div className="mt-10 glass max-w-3xl w-full p-6 mx-auto">
+        <ul className="grid sm:grid-cols-3 gap-3 text-sm md:text-base">
+          <li><span className="font-semibold">Stack:</span> React, Spring Boot, GraphQL</li>
+          <li><span className="font-semibold">Cloud:</span> AWS · GCP</li>
+          <li><span className="font-semibold">Focus:</span> Microservices · CI/CD</li>
+        </ul>
       </div>
     </section>
   );

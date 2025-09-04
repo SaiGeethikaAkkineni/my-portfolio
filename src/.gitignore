@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+pnpm-lock.yaml
+yarn.lock
+
+# builds
+dist/
+.build/
+.cache/
+
+# env & secrets
+.env
+.env.*
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS/editor miscellany
+.DS_Store
+*.local
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json

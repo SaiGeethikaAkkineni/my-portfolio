@@ -2,51 +2,57 @@ const jobs = [
   {
     role: "Software Developer",
     company: "Quartet Ai",
-    time: "March 2025 – Present",
+    time: "Mar 2025 – Present",
     details: [
-      "Developed REST & GraphQL APIs with Spring Boot.",
-      "Integrated MongoDB for flexible schema models.",
-      "Maintained CI/CD pipelines with Jenkins & SonarQube.",
-      "Created technical documentation to improve onboarding."
+      "Built REST & GraphQL APIs with Spring Boot",
+      "MongoDB for flexible schemas",
+      "CI/CD with Jenkins & SonarQube",
+      "Authored technical docs",
     ],
   },
   {
     role: "Software Engineer",
     company: "Accenture",
-    time: "Oct 2022 – June 2023",
+    time: "Oct 2022 – Jun 2023",
     details: [
-      "Built Spring Boot microservices with OAuth2 security.",
-      "Integrated Apache Kafka for event-driven workflows.",
-      "Managed Oracle & DynamoDB persistence.",
-      "Automated CI/CD and deployed on AWS."
+      "Spring Boot microservices with OAuth2",
+      "Kafka event-driven flows",
+      "Oracle & DynamoDB persistence",
+      "CI/CD on AWS with Docker",
     ],
   },
   {
     role: "Junior Software Engineer",
-    company: "Aditya Precitech PVT LTD",
-    time: "Jun 2020 – July 2022",
+    company: "Aditya Precitech",
+    time: "Jun 2020 – Jul 2022",
     details: [
-      "Developed inventory management system using Django.",
-      "Built LSTM stock prediction model with 92% accuracy."
+      "Inventory system in Django",
+      "LSTM stock model (92% acc)",
     ],
   },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 container mx-auto px-6">
-      <h2 className="text-4xl font-bold mb-6 text-gray-800">Experience</h2>
-      {jobs.map((job) => (
-        <div key={job.company} className="mb-8 p-6 bg-white shadow-md rounded-lg">
-          <h3 className="text-xl font-semibold text-blue-600">
-            {job.role} | {job.company}
-          </h3>
-          <p className="text-gray-500">{job.time}</p>
-          <ul className="list-disc ml-6 mt-2 text-gray-700">
-            {job.details.map((d, i) => <li key={i}>{d}</li>)}
-          </ul>
+    <section id="experience" className="section">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="h-section mb-6">Experience</h2>
+        <div className="relative before:absolute before:left-4 before:top-0 before:bottom-0 before:w-1 before:bg-gradient-to-b before:from-blue-500/50 before:to-indigo-500/50">
+          {jobs.map((j, idx) => (
+            <div key={j.company} className="pl-10 mb-6">
+              <div className="glass p-6">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xl font-bold text-blue-600">{j.role} · {j.company}</h3>
+                  <span className="text-sm opacity-70">{j.time}</span>
+                </div>
+                <ul className="list-disc ml-5 mt-2 opacity-90">
+                  {j.details.map((d,i) => <li key={i}>{d}</li>)}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 }

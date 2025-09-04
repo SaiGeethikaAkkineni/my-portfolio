@@ -2,6 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #f8fafc;          /* slate-50 */
+  --fg: #0f172a;          /* slate-900 */
+  --card: rgba(255, 255, 255, 0.75);
+  --ring: 59,130,246;     /* blue-500 */
+}
+
+.dark :root {
+  --bg: #0b1220;          /* custom dark */
+  --fg: #e2e8f0;          /* slate-200 */
+  --card: rgba(15, 23, 42, 0.6);
+}
+
+html, body, #root {
+  height: 100%;
+}
+
 body {
-  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Glass card */
+.glass {
+  @apply shadow-xl rounded-2xl border border-white/10;
+  background: var(--card);
+  backdrop-filter: blur(8px);
+}
+
+/* Pretty button */
+.btn {
+  @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold transition transform;
+}
+.btn-primary {
+  @apply text-white bg-blue-600 hover:bg-blue-700 active:scale-95 shadow-glow;
+}
+.btn-outline {
+  @apply border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white active:scale-95;
+}
+
+/* Section spacing */
+.section {
+  @apply py-20 px-6 md:px-8;
+}
+
+/* Title deco */
+.h-section {
+  @apply text-3xl md:text-4xl font-extrabold tracking-tight;
+}
+
+/* Animated gradient orb (behind hero) */
+.orb {
+  position: absolute;
+  width: 32rem;
+  height: 32rem;
+  filter: blur(64px);
+  background: conic-gradient(from 0deg, #60a5fa, #a78bfa, #60a5fa);
+  opacity: 0.35;
+  border-radius: 50%;
+  animation: spin 16s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
