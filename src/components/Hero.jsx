@@ -14,9 +14,15 @@ export default function Hero() {
       </p>
 
       <div className="mt-8 flex flex-wrap justify-center gap-3">
-        <a href={resumeHref} className="btn btn-primary">
+        <a
+          href={`${import.meta.env.BASE_URL}resume.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-outline"
+        >
           📄 Resume
         </a>
+
         <a
           href="https://github.com/"
           target="_blank" rel="noreferrer"

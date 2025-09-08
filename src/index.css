@@ -27,30 +27,99 @@ body {
 
 /* Glass card */
 .glass {
-  @apply shadow-xl rounded-2xl border border-white/10;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); /* shadow-xl */
+  border-radius: 1rem; /* rounded-2xl */
+  border-width: 1px; /* border */
+  border-color: rgba(255,255,255,0.1); /* border-white/10 */
   background: var(--card);
   backdrop-filter: blur(8px);
 }
-
-/* Pretty button */
 .btn {
-  @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold transition transform;
-}
+  display: inline-flex; /* inline-flex */
+  align-items: center; /* items-center */
 .btn-primary {
-  @apply text-white bg-blue-600 hover:bg-blue-700 active:scale-95 shadow-glow;
+  color: #fff; /* text-white */
+  background-color: #2563eb; /* bg-blue-600 */
+  box-shadow: 0 0 16px 0 #3b82f6; /* shadow-glow (approximate) */
+  transition: background 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  background-color: #1d4ed8; /* bg-blue-700 */
+}
+.btn-primary:active {
+  transform: scale(0.95);
+}
+  padding-top: 0.625rem; /* py-2.5 */
+  padding-bottom: 0.625rem; /* py-2.5 */
+  border-radius: 0.75rem; /* rounded-xl */
+  font-weight: 600; /* font-semibold */
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* gap-2 */
+  padding-left: 1.25rem; /* px-5 */
+  padding-right: 1.25rem; /* px-5 */
+  padding-top: 0.625rem; /* py-2.5 */
+  padding-bottom: 0.625rem; /* py-2.5 */
+  border-radius: 0.75rem; /* rounded-xl */
+  font-weight: 600; /* font-semibold */
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.btn-primary {
+  color: #fff; /* text-white */
+  background-color: #2563eb; /* bg-blue-600 */
+  box-shadow: 0 0 16px 0 #3b82f6; /* shadow-glow (approximate) */
+  transition: background 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  background-color: #1d4ed8; /* bg-blue-700 */
+}
+.btn-primary:active {
+  transform: scale(0.95);
 }
 .btn-outline {
-  @apply border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white active:scale-95;
+  border-width: 1px;
+  border-color: #2563eb; /* blue-600 */
+  color: #2563eb; /* blue-600 */
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+.btn-outline:hover {
+  background-color: #2563eb; /* blue-600 */
+  color: #fff;
+}
+.btn-outline:active {
+  transform: scale(0.95);
 }
 
 /* Section spacing */
 .section {
-  @apply py-20 px-6 md:px-8;
+  padding-top: 5rem;    /* py-20 */
+  padding-bottom: 5rem; /* py-20 */
+  padding-left: 1.5rem; /* px-6 */
+  padding-right: 1.5rem; /* px-6 */
+}
+@media (min-width: 768px) {
+  .section {
+    padding-left: 2rem;  /* md:px-8 */
+    padding-right: 2rem; /* md:px-8 */
+  }
 }
 
 /* Title deco */
 .h-section {
-  @apply text-3xl md:text-4xl font-extrabold tracking-tight;
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2.25rem;
+  font-weight: 800; /* font-extrabold */
+  letter-spacing: -0.025em; /* tracking-tight */
+}
+@media (min-width: 768px) {
+  .h-section {
+    font-size: 2.25rem; /* md:text-4xl */
+    line-height: 2.5rem;
+  }
 }
 
 /* Animated gradient orb (behind hero) */
